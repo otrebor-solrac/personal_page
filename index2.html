@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Roberto Vazquez</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <meta
+      name="description"
+      content="Ingeniero en mecatr'onica, graduado del IPN"
+    />
+    <meta
+      name="keywords"
+      content="mechatronic engineer,machine learning, optimization, mathematics, probability,statistics,compuer science"
+    />
+    <meta name="author" content="Roberto Vazquez" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/row-down.css" />
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-navbar">
+          <img src="img/r-logo.png" />
+        </div>
+        <ul class="nav-links">
+          <div class="menu">
+            <li>
+              <a href="#about" data-scroll class="text-color-nav">About me</a>
+            </li>
+            <li>
+              <a href="#work" data-scroll class="text-color-nav">Experience</a>
+            </li>
+            <li>
+              <a href="#portfolio" data-scroll class="text-color-nav"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#certificates" data-scroll class="text-color-nav"
+                >Certifications</a
+              >
+            </li>
+            <li>
+              <a href="#certificates" data-scroll class="text-color-nav"
+                >Contact me</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="header-animation">
+        <canvas id="animation-canvas"></canvas>
+
+        <div id="intro-animation">
+          <div class="main-title">
+            <div class="logo-r">
+              <img src="img/r-logo.png" alt="Logo" />
+            </div>
+
+            <h1 class="text-color">Roberto Vazquez</h1>
+            <p class="text-color">Data Scientist</p>
+            <div class="logo-ml">
+              <img src="img/brain-circuit.png" alt="machine-learning logo" />
+            </div>
+          </div>
+
+          <div id="row-down">
+            <a data-scroll href="">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script for intro Animation  -->
+    <script src="scripts/animation/TweenLite.min.js"></script>
+    <script src="scripts/animation/EasePack.min.js"></script>
+    <script src="scripts/animation/rAF.js"></script>
+    <script src="scripts/animation/introAnimation.js"></script>
+    <script src="scripts/animation/waypoints.min.js"></script>
+  </body>
+</html>
