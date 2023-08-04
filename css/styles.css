@@ -1,0 +1,137 @@
+:root {
+  --black-background:black;
+  --warm-black: #031926;
+  --just-white: rgba(245, 245, 245, 0.829);
+  --gradient-black: rgba(21, 21, 25, 0.18);
+  --purple: #3c3163;
+  --yellow: #fff38a;
+  --transition-time: 0.5s;
+  --bg-filter-opacity: 0.5;
+  --warm-blue: #04879c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: var(--black-background);
+  color: var(--just-white);
+}
+
+/* Lighting circle */
+.fixed-circle {
+  padding: 50px 10px;
+  position: relative;
+  transition: all 0.9s ease-in-out;
+}
+.fixed-circle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  height: 1px;
+  transform: translateX(-50%);
+  background-color: #242424;
+}
+.fixed-circle::before {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: var(--warm-blue);
+  border: 5px solid #242424;
+  outline: 10px solid #151519;
+  z-index: 9;
+  animation: toggleFade 2s infinite;
+}
+@keyframes toggleFade {
+  0%,
+  100% {
+    background-color: var(--warm-blue);
+  }
+  50% {
+    background-color: #242424;
+  }
+}
+
+/* Start animation */
+.header-animation {
+  height: 100%;
+  width: 100%;
+  background-color: var(--black-background);
+  background-image: linear-gradient(0deg, #000000 0%, #191414 100%);
+  padding: 0px;
+}
+
+/*Content*/
+.main-title {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  color: var(--just-white);
+}
+
+.main-title .logo-r {
+  text-align: center;
+}
+
+.main-title h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px;
+}
+
+.main-title p {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.main-title .logo-ml {
+  text-align: center;
+  padding-top: 3rem;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 640px) {
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  .main-title h1 {
+    font-size: 4rem;
+  }
+  .main-title p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .main-title p {
+    line-height: 4rem;
+  }
+}
