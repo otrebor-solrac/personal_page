@@ -1,0 +1,253 @@
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem;
+  background-color: black;
+}
+
+.card-grid-space {
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  margin: 15px;
+}
+
+.projects .card {
+  height: 100%;
+  font-size: 1.5rem;
+  background-color: black;
+  color: var(--just-white);
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: hidden;
+  border: 3px solid var(--warm-blue);
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 0 5rem -5rem var(--warm-blue);
+  transition: all, var(--transition-time);
+  align-items: flex-start;
+
+  display: block;
+  /* flex-direction: column; */
+  position: relative;
+
+  /* background-image: linear-gradient(
+      rgba(0, 0, 0, var(--bg-filter-opacity)),
+      rgba(0, 0, 0, var(--bg-filter-opacity))
+    ),
+    url("https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg"); */
+}
+
+.card .date {
+  width: 100%;
+  font-size: 0.75em;
+  line-height: 1em;
+  opacity: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 2rem;
+}
+
+/* 
+.card:hover {
+  transform: rotate(0);
+}
+
+
+.card:before,
+.card:after {
+  content: "";
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.card:after {
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card:hover {
+  color: var(--color);
+}
+
+.card:hover:before,
+.card:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+} */
+
+/* MEDIA QUERIES */
+/* @media screen and (max-width: 1285px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .card-grid-space .num {
+    /margin-left: 0;
+    /text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+} */
+
+
+/*Efecto*/
+.modalmask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity var(--transition-time) ease-in;
+  -moz-transition: opacity var(--transition-time) ease-in;
+  transition: opacity var(--transition-time) ease-in;
+  pointer-events: none;
+}
+.modalmask:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox{
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  background: #fff;
+  border-radius:3px;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+  padding: 10px;
+  top: 25%;
+  left: 10%;  
+}
+
+/*Movimientos*/
+.movedown {
+  margin: 0 auto;
+}
+.rotate {
+  margin: 10% auto;
+  -webkit-transform: scale(-5,-5);
+  transform: scale(-5,-5);
+}
+.resize {
+  margin: 10% auto;
+  width:0;
+  height:0;
+
+}
+.modalmask:target .movedown{       
+  margin: 0 auto;
+}
+.modalmask:target .rotate{     
+  transform: rotate(360deg) scale(1,1);
+      -webkit-transform: rotate(360deg) scale(1,1);
+}
+
+.modalmask:target .resize{
+  width:300px;
+  height:300px;
+}
+
+/*Boton de cerrar*/
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius:3px;
+
+}
+
+.close:hover {
+  background: #FAAC58;
+  color:#222;
+}
