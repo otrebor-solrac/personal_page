@@ -45,6 +45,11 @@ function colouredDots() {
 
     arrowLeft.style.opacity = "0.5";
     arrowRight.style.opacity = "1";
+
+    expInfo1.classList.toggle("inactive");
+    expInfo2.classList.add("inactive");
+    expInfo3.classList.add("inactive");1
+
   } else if (inputCheck2.checked) {
     timeLine.children[1].style.backgroundColor = colorDotChecked;
     timeLine.children[2].style.backgroundColor = colorDotUnchecked;
@@ -52,18 +57,34 @@ function colouredDots() {
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
+
+    expInfo1.classList.add("inactive");
+    expInfo2.classList.toggle("inactive");
+    expInfo3.classList.add("inactive");1
+
   } else if (inputCheck3.checked) {
     timeLine.children[1].style.backgroundColor = colorDotChecked;
     timeLine.children[2].style.backgroundColor = colorDotChecked;
     timeLine.children[3].style.backgroundColor = colorDotUnchecked;
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
+
+    expInfo1.classList.add("inactive");
+    expInfo2.classList.add("inactive");
+    expInfo3.classList.toggle("inactive");1
+
   } else {
     timeLine.children[1].style.backgroundColor = colorDotChecked;
     timeLine.children[2].style.backgroundColor = colorDotChecked;
     timeLine.children[3].style.backgroundColor = colorDotChecked;
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "0.5";
+
+    expInfo1.classList.add("inactive");
+    expInfo2.classList.add("inactive");
+    expInfo3.classList.add("inactive");1
+
+
   }
 }
 function previousInfo() {
