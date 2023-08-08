@@ -15,12 +15,14 @@
 .skills .skills-list {
   width: 80%;
   margin: 0 auto;
-  display: block;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   position: relative;
 }
 .skills-list .list-container {
-  width: 100%;
+  width: 320px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -37,13 +39,15 @@
   text-align: center;
   line-height: 15px;
   font-size: 1.8rem;
-  background-color: var(--grey);
+  /* background-color: var(--grey); */
+  border-bottom: 2px solid var(--warm-blue);
+  font-weight: 700;
   width: 220px;
   margin-bottom: 10px;
 }
 
 .skills-list .list-elements-container {
-  width: 100%;
+  max-width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,10 +69,18 @@
 }
 
 .skills-list .list-elements li {
-  background-color: brown;
+  background-color:  var(--warm-blue);
   border-radius: 25px;
   padding: 2px;
   margin: 5px;
   width: 120px;
   text-align: center;
+  font-weight: 500;
 }
+
+
+.skills-list .list-elements li:hover {
+    background-color: #34585a ;
+    transform: scale(1.4);
+    font-weight: 700;
+  }
