@@ -61,7 +61,7 @@
   height: 100%;
   display: flex;
   /* background-color: red; */
-  position: absolute;
+  position: relative;
   z-index: 1;
   border-radius: 25px;
   margin: 0 auto;
@@ -70,28 +70,63 @@
 }
 
 .experience-container .timeline {
-  position: absolute;
+  /* position: absolute;
   left: 10%;
   width: 80%;
   height: 30px;
-  bottom: 0%;
+  bottom: 0%; */
+  /* max-width: 500px; */
+  /* background-color: gainsboro; */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* max-width: 500px; */
-  /* background-color: gainsboro; */
 }
-.experience-container .content .experience-picture {
-  flex: 1 1 25%;
+.experience-container .content .experience-logos {
   /* background-color: darkorange; */
   margin: 10px;
-  height: 35%;
+  height: 20%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#sineti-logo {
+  height: 70px;
+  width: 150px;
+}
+
+#EDT-logo {
+  height: 55px;
+  width: 105px;
+}
+
+#springair-logo {
+  height: 90px;
+  width: 90px;
+}
+
+#FEMSA-logo {
+  height: 55px;
+  width: 200px;
+}
+#im-logo {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.experience-logos .images-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: red; */
 }
 
 .experience-container .content .experience-description {
   display: flex;
   flex-direction: column;
-  flex: 1 1 75%;
   /* background-color: blue; */
   margin: 10px;
   height: 65%;
@@ -139,29 +174,6 @@
   line-height: 1.5;
   color: var(--just-white);
   /* background-color: blue; */
-}
-.experience-container .films-image {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 30%;
-}
-
-.experience-container .films-image-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  display: flex;
-  transition: var(--transition-time) ease all;
-}
-.experience-container .film-image {
-  position: relative;
-  height: 100%;
-  flex: 1 1 33.33%;
-  width: 33.33%;
-  background-size: 130%;
 }
 
 .experience-container .timeline-line:before {
