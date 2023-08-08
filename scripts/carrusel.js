@@ -64,7 +64,6 @@ function colouredDots() {
     timeLine.children[3].style.backgroundColor = colorDotChecked;
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "0.5";
-
   }
 }
 function previousInfo() {
@@ -85,6 +84,9 @@ function previousInfo() {
 
     arrowRight.style.opacity = "1";
     arrowLeft.style.opacity = "0.5";
+
+    expInfo2.classList.add("inactive");
+    expInfo1.classList.toggle("inactive");
   } else if (inputCheck3.checked) {
     timeLine.children[2].style.backgroundColor = colorDotUnchecked;
     inputCheck1.checked = false;
@@ -94,6 +96,9 @@ function previousInfo() {
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
+
+    expInfo3.classList.add("inactive");
+    expInfo2.classList.toggle("inactive");
   } else {
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
@@ -103,6 +108,9 @@ function previousInfo() {
     inputCheck2.checked = false;
     inputCheck3.checked = true;
     inputCheck4.checked = false;
+
+    expInfo4.classList.add("inactive");
+    expInfo3.classList.toggle("inactive");
   }
 }
 
@@ -116,6 +124,9 @@ function nextInfo() {
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
+
+    expInfo1.classList.add("inactive");
+    expInfo2.classList.toggle("inactive");
   } else if (inputCheck2.checked) {
     timeLine.children[2].style.backgroundColor = colorDotChecked;
     inputCheck1.checked = false;
@@ -125,6 +136,9 @@ function nextInfo() {
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
+
+    expInfo2.classList.add("inactive");
+    expInfo3.classList.toggle("inactive");
   } else if (inputCheck3.checked) {
     timeLine.children[3].style.backgroundColor = colorDotChecked;
     inputCheck1.checked = false;
@@ -134,6 +148,9 @@ function nextInfo() {
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "0.5";
+
+    expInfo3.classList.add("inactive");
+    expInfo4.classList.toggle("inactive");
   } else {
     arrowLeft.style.opacity = "1";
   }
