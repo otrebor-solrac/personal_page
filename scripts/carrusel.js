@@ -10,6 +10,12 @@ const expInfo1 = document.querySelector("#exp-info-1");
 const expInfo2 = document.querySelector("#exp-info-2");
 const expInfo3 = document.querySelector("#exp-info-3");
 
+const sinetiLogo = document.querySelector("#sineti-logo");
+const edtLogo = document.querySelector("#EDT-logo");
+const springLogo = document.querySelector("#springair-logo");
+const femsaLogo = document.querySelector("#FEMSA-logo");
+const imLogo = document.querySelector("#im-logo");
+
 const timeLine = document.querySelector("#timeline");
 const timeLineLine = document.querySelector(".timeline-line");
 
@@ -49,7 +55,12 @@ function colouredDots() {
     expInfo1.classList.toggle("inactive");
     expInfo2.classList.add("inactive");
     expInfo3.classList.add("inactive");
-    1;
+
+    imLogo.classList.add("inactive");
+    sinetiLogo.classList.add("inactive");
+    springLogo.classList.add("inactive");
+    edtLogo.classList.toggle("inactive");
+    femsaLogo.classList.remove("inactive");
   } else if (inputCheck2.checked) {
     timeLine.children[1].style.backgroundColor = colorDotChecked;
     timeLine.children[2].style.backgroundColor = colorDotUnchecked;
@@ -61,7 +72,13 @@ function colouredDots() {
     expInfo1.classList.add("inactive");
     expInfo2.classList.toggle("inactive");
     expInfo3.classList.add("inactive");
-    1;
+
+    edtLogo.classList.add("inactive");
+    sinetiLogo.classList.add("inactive");
+    springLogo.classList.add("inactive");
+
+    imLogo.classList.toggle("inactive");
+    femsaLogo.classList.remove("inactive");
   } else {
     timeLine.children[1].style.backgroundColor = colorDotChecked;
     timeLine.children[2].style.backgroundColor = colorDotChecked;
@@ -72,6 +89,13 @@ function colouredDots() {
     expInfo1.classList.add("inactive");
     expInfo2.classList.add("inactive");
     expInfo3.classList.toggle("inactive");
+
+    edtLogo.classList.add("inactive");
+    imLogo.classList.add("inactive");
+    femsaLogo.classList.add("inactive");
+
+    sinetiLogo.classList.toggle("inactive");
+    springLogo.classList.toggle("inactive");
   }
 }
 function previousInfo() {
@@ -83,6 +107,8 @@ function previousInfo() {
 
     arrowRight.style.opacity = "1";
     arrowLeft.style.opacity = "0.5";
+
+
   } else if (inputCheck2.checked) {
     timeLine.children[1].style.backgroundColor = colorDotUnchecked;
     inputCheck1.checked = true;
@@ -95,6 +121,12 @@ function previousInfo() {
 
     expInfo2.classList.add("inactive");
     expInfo1.classList.toggle("inactive");
+
+    imLogo.classList.add("inactive");
+    sinetiLogo.classList.add("inactive");
+    springLogo.classList.add("inactive");
+    edtLogo.classList.remove("inactive");
+    femsaLogo.classList.remove("inactive");
   } else if (inputCheck3.checked) {
     timeLine.children[2].style.backgroundColor = colorDotUnchecked;
     inputCheck1.checked = false;
@@ -107,6 +139,13 @@ function previousInfo() {
 
     expInfo3.classList.add("inactive");
     expInfo2.classList.toggle("inactive");
+
+    edtLogo.classList.add("inactive");
+    sinetiLogo.classList.add("inactive");
+    springLogo.classList.add("inactive");
+
+    imLogo.classList.toggle("inactive");
+    femsaLogo.classList.remove("inactive");
   } else {
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
@@ -128,25 +167,37 @@ function nextInfo() {
     inputCheck1.checked = false;
     inputCheck2.checked = true;
     inputCheck3.checked = false;
-    // inputCheck4.checked = false;
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "1";
 
     expInfo1.classList.add("inactive");
     expInfo2.classList.toggle("inactive");
+
+    edtLogo.classList.add("inactive");
+    sinetiLogo.classList.add("inactive");
+    springLogo.classList.add("inactive");
+
+    imLogo.classList.toggle("inactive");
+    femsaLogo.classList.remove("inactive");
   } else if (inputCheck2.checked) {
     timeLine.children[2].style.backgroundColor = colorDotChecked;
     inputCheck1.checked = false;
     inputCheck2.checked = false;
     inputCheck3.checked = true;
-    // inputCheck4.checked = false;
 
     arrowLeft.style.opacity = "1";
     arrowRight.style.opacity = "0.5";
 
     expInfo2.classList.add("inactive");
     expInfo3.classList.toggle("inactive");
+
+    edtLogo.classList.add("inactive");
+    imLogo.classList.add("inactive");
+    femsaLogo.classList.add("inactive");
+
+    sinetiLogo.classList.toggle("inactive");
+    springLogo.classList.toggle("inactive");
   } else {
     arrowLeft.style.opacity = "1";
   }
