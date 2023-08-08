@@ -38,14 +38,34 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ed37";
 }
 
+.icofont-github:before
+{
+  content: "\ed3e";
+}
+
 .icofont-linkedin:before
 {
   content: "\ed4d";
 }
 
-.icofont-github:before
+.icofont-email:before
 {
-  content: "\ed3e";
+  content: "\ef12";
+}
+
+.icofont-duotone.icofont-location:before
+{
+  content: "\13b57";
+}
+
+.icofont-duotone.icofont-location:after
+{
+  content: "\13b56";
+}
+
+.icofont-phone:before
+{
+  content: "\efbb";
 }
 
 [class^="icofont-"].icofont-duotone,

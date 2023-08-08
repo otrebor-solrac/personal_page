@@ -1,5 +1,5 @@
 :root {
-  --black-background:black;
+  --black-background: black;
   --warm-black: #031926;
   --just-white: rgba(245, 245, 245, 0.829);
   --gradient-black: rgba(21, 21, 25, 0.18);
@@ -8,6 +8,7 @@
   --transition-time: 0.5s;
   --bg-filter-opacity: 0.5;
   --warm-blue: #04879c;
+  --grey: #827b68;
 }
 
 * {
