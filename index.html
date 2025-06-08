@@ -11,8 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/icofont.css" />
-
     <meta
       name="description"
       content="Ingeniero en mecatr'onica, graduado del IPN"
@@ -23,12 +21,19 @@
     />
     <meta name="author" content="Roberto Vazquez" />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/row-down.css" />-->
-    <!-- <link rel="stylesheet" type="text/css" href="css/navbar.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
     <link rel="stylesheet" type="text/css" href="css/about-me.css" />
     <link rel="stylesheet" type="text/css" href="css/skills.css" />
     <link rel="stylesheet" type="text/css" href="css/experience.css" />
+    <link rel="stylesheet" type="text/css" href="css/education.css" />
+
     <link rel="stylesheet" type="text/css" href="css/projects.css" />
     <link rel="stylesheet" type="text/css" href="css/contact.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css" />
@@ -40,38 +45,32 @@
   </head>
   <body>
     <header>
-      <!-- <nav class="navbar">
-        <div class="logo-navbar">
-          <img src="img/r-logo.png" />
-        </div>
-        <ul class="nav-links">
-          <div class="menu">
-            <li>
-              <a href="#about-me" data-scroll class="text-color-nav"
-                >About me</a
-              >
-            </li>
-            <li>
-              <a href="#work" data-scroll class="text-color-nav">Experience</a>
-            </li>
-            <li>
-              <a href="#portfolio" data-scroll class="text-color-nav"
-                >Projects</a
-              >
-            </li>
-            <li>
-              <a href="#certificates" data-scroll class="text-color-nav"
-                >Certifications</a
-              >
-            </li>
-            <li>
-              <a href="#contact" data-scroll class="text-color-nav"
-                >Contact me</a
-              >
-            </li>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="img/r-logo.png" alt="Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about-me">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#work-experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact me</a>
+              </li>
+            </ul>
           </div>
-        </ul>
-      </nav> -->
+        </div>
+      </nav>
     </header>
     <main>
       <section class="header-animation fixed-circle">
@@ -82,20 +81,14 @@
               <img src="img/r-logo.png" alt="Logo" />
             </div>
             <h1>Roberto Vazquez</h1>
-            <p>Data Scientist / Data Engineer / Web Developer</p>
+            <p>
+              Experienced AI Engineer / Machine Learning Engineer / Data
+              Scientist / Data Engineer
+            </p>
             <div class="logo-ml">
               <img src="img/brain-circuit.png" alt="machine-learning logo" />
             </div>
           </div>
-
-          <!-- <div id="row-down">
-            <a data-scroll href="#about-me">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </div> -->
         </div>
       </section>
 
@@ -406,6 +399,56 @@
         </div>
       </section>
 
+      <section class="education fixed-circle">
+        <h2 class="section-header">Education and Courses</h2>
+        <div
+          class="carousel"
+          data-flickity='{"groupCells": 1,"wrapAround": true,"freeScroll": true}'
+        >
+          <div class="carousel-cell">
+            <h2>Diploma program in statistics for data analysis</h2>
+            <h3>UNAM</h3>
+            <h4>07/2022 - 01/2023</h4>
+
+            <ul>
+              <li>
+                Certificate in statistical techniques and models for data
+                analysis.
+              </li>
+            </ul>
+          </div>
+          <div class="carousel-cell">
+            <h2>MSc. in Computer Science</h2>
+            <h3>Tecnológico de Monterrey</h3>
+            <h4>08/2017 - 09/2019</h4>
+
+            <ul>
+              <li>
+                Thesis : Anomalous vehicular traffic detection through spectral
+                techniques and unsupervised learning models.
+              </li>
+              <li>
+                Paper: Early Anomalous Vehicular Traffic Detection Through
+                Spectral Techniques and Unsupervised Learning Models. Accepted
+                by Springer LNAI.
+              </li>
+            </ul>
+          </div>
+          <div class="carousel-cell">
+            <h2>Mechatronic Engineer</h2>
+            <h3>Instituto Politécnico Nacional</h3>
+            <h4>08/2009 - 06/2015</h4>
+
+            <ul>
+              <li>
+                Thesis: Mobile manipulator robot of 6 DOF to distribute
+                medicines at hospital.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section class="projects fixed-circle" id="projects">
         <div id="modal1" class="modalmask">
           <div class="modalbox movedown">
@@ -581,5 +624,20 @@
     <script src="scripts/animation/waypoints.min.js"></script>
 
     <script src="scripts/carrusel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script>
+      // Cerrar el menú al hacer clic en un enlace
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarCollapse.classList.contains('show')) {
+            document.querySelector('.navbar-toggler').click();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
